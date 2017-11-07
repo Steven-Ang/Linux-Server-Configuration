@@ -144,7 +144,7 @@ Password authentication is okay, but key-base authentication is much more secure
 
 * Edit this file by using either nano or vim - `sudo nano /etc/ssh/sshd_config`
 * Find the line where it says `PasswordAuthentication yes` change it to `PasswordAuthentication no`
-* Find the line where it says `PermitRootLogin yes` change it to `PermitRootLogin yes`
+* Find the line where it says `PermitRootLogin yes` change it to `PermitRootLogin no`
 * Exit the file and restart the service to enforce it - `sudo service ssh restart`
 
 ### 6. Update all of the Packages
@@ -172,7 +172,7 @@ I recommend using the first option because it's quicker.
 For security purpose, the server will only allow three connections - HTTP/80, SSH/2200, and NTP/123.
 
 1. Block all the incoming connection - `sudo ufw default deny incoming`
-2. Allow outgoing connection - `sudo ufw default allow outcoming`
+2. Allow outgoing connection - `sudo ufw default allow outgoing`
 3. Allow incoming connection for SSH on port 2200 - `sudo ufw allow 2200/tcp`
 4. Allow incoming connection for HTTP on port 80 - `sudo ufw allow wwww`
 5. Allow incoming connection for NTP on port 123 - `sudo ufw allow ntp`
@@ -229,6 +229,7 @@ GRANT ALL ON SCHEMA public TO public;
 ### 15. Setting Up the Web Servers
 
 * Change to the catalog directory and edit the file: application.py, db_data.py, and db_setup.py. Find the line like this `engine = create_engine('sqlite:///music.db')` change it to `engine = create_engine('postgresql://catalog:catalog@localhost/catalog')`. We no longer use SQLite as our database anymore so I must change it.
+* Inside application.py, make sure CLIENT_ID's path is an absolute path.
 * Rename `application.py` to `__init__.py` - `mv application.py __init__.py`
 * Setup the data for the application:
 ```
