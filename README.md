@@ -6,8 +6,7 @@ Installation of a Linux distribution on a virtual machine and prepare it to host
 
 | Name                   | Value                                                            |
 | ---------------------- |:----------------------------------------------------------------:|
-| Local IP Address       | 13.229.98.127                                                    |
-| URL                    | http://ec2-13-229-98-127.ap-southeast-1a.compute.amazonaws.com/  |
+| Local IP Address       | 13.229.122.182                                                   |
 | SSH Port               | 2200                                                             |
 | User                   | grader                                                           |
 
