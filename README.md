@@ -6,9 +6,9 @@ Installation of a Linux distribution on a virtual machine and prepare it to host
 
 | Name                   | Value                                                            |
 | ---------------------- |:----------------------------------------------------------------:|
-| Local IP Address       | 13.229.122.182                                                   |
-| SSH Port               | 2200                                                             |
-| User                   | grader                                                           |
+| Local IP Address       | ~~13.229.122.182~~                                                   |
+| SSH Port               | ~~2200~~                                                             |
+| User                   | ~~grader~~                                                           |
 
 # Prerequisites
 
